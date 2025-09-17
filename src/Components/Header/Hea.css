@@ -1,0 +1,232 @@
+/* Hea.css - header styles for your React component */
+
+/* -------------------------
+   Base / page-level styles
+   ------------------------- */
+:root{
+  --bg-page: #EBECF2;
+  --menu-bg: #252635;       /* dark bar */
+  --divider: rgb(52,53,71);
+  --accent: #4cafef;
+}
+
+/* center wrapper used in your component */
+.center{
+  padding-top: 6px;
+  padding-bottom: 4px;
+  /* background-color: green; */
+  user-select: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* keeps header at top like your original */
+}
+
+/* -------------------------
+   Header / menu bar layout
+   ------------------------- */
+.menu{
+  width: 100%;
+  max-width: 1200px;      /* keeps content centred on large screens */
+  box-sizing: border-box;
+  background: var(--menu-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  gap: 12px;
+  color: #fff;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 4px 4px 40px black;
+}
+
+/* Logo (left) */
+.logo{
+  font-size: 28px;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 0.2px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Hamburger icon (hidden on desktop) */
+.menu-icon{
+  display: none;              /* shown on mobile via media query */
+  cursor: pointer;
+  user-select: none;
+  align-items: center;
+  justify-content: center;
+}
+.menu-icon .material-icons{
+  font-size: 28px;
+  line-height: 1;
+  vertical-align: middle;
+  color: white;
+}
+
+/* -------------------------
+   Nav items (center)
+   ------------------------- */
+.items{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex: 1;                    /* occupy remaining space so items can be centered */
+  box-sizing: border-box;
+}
+
+/* .item is a wrapper div around NavLink */
+.item{
+  display: flex;
+  align-items: center;
+}
+
+/* target anchor produced by NavLink */
+.item a,
+.item .active-link {
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 15px;
+  color:green;
+  display: inline-block;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+
+/* hover */
+.item a:hover,
+.item .inactive-link:hover {
+  background: rgba(255,255,255,0.06);
+}
+
+/* active navlink styling from NavLink */
+.item a.active-link,
+.item .active-link {
+  background: rgba(255,255,255,0.12);
+  font-weight: 600;
+}
+
+/* If NavLink returns "inactive-link", ensure color remains white */
+.item a.inactive-link,
+.item .inactive-link {
+  color: white;
+}
+
+/* -------------------------
+   Auth buttons (right)
+   ------------------------- */
+.auth-buttons{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* small button reset */
+.auth-buttons button{
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* Login (outline) */
+.auth-buttons button:first-child{
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+/* Sign Up (primary) */
+.auth-buttons button:last-child{
+  background: var(--accent);
+  color: white;
+}
+
+/* hover states */
+.auth-buttons button:first-child:hover{
+  background: rgba(255,255,255,0.04);
+}
+.auth-buttons button:last-child:hover{
+  filter: brightness(.95);
+}
+
+/* -------------------------
+   Mobile responsive behaviour
+   ------------------------- */
+@media (max-width: 650px) {
+
+  /* stack header vertically */
+  .menu{
+    padding: 12px 14px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* show the hamburger (positioned at top-right) */
+  .menu-icon{
+    display: flex;
+    position: absolute;
+    top: 12px;
+    right: 18px;
+  }
+
+  /* make items collapse vertically */
+  .items{
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    align-items: stretch;
+    gap: 0;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 320ms ease, opacity 240ms ease;
+    margin-top: 8px;
+    border-top: 1px solid var(--divider);
+  }
+
+  /* when you add "open" class from React, menu expands */
+  .items.open{
+    max-height: 1000px; /* large enough to show all items */
+    opacity: 1;
+  }
+
+  /* each item becomes full-width with divider */
+  .item{
+    width: 100%;
+    border-top: 1px solid var(--divider);
+  }
+
+  .item:first-child{
+    border-top: none;
+  }
+
+  .item a,
+  .item .active-link{
+    display: block;
+    width: 100%;
+    color: pink;
+    padding: 14px 16px;
+  }
+
+  .item .active-link{
+    color: green;
+  }
+
+
+  /* auth buttons: full width row under menu items */
+  .auth-buttons{
+    display: none;
+  }
+
+  /* slightly larger touch targets for mobile */
+ 
+}
