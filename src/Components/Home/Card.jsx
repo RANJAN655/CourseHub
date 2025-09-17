@@ -37,7 +37,7 @@ function Card() {
   
     <div className=" relative max-w-[95vw]  max-sm:pr-.05  max-sm:pl-0.5 mx-auto select-none shrink basis-auto">
       <button
-        className="absolute -top-[25px] -translate-y-1/2 right-[40px] w-10 h-10 bg-blue-500 border foucs:blur-xl border-gray-400 rounded-full text-5xl cursor-pointer"
+        className="absolute -top-[25px] -translate-y-1/2 right-[15px] w-10 h-10 bg-blue-500 border foucs:blur-xl border-gray-400 rounded-full text-5xl cursor-pointer"
         onClick={scrollLeftBy}
       >
         &gt;
@@ -662,7 +662,7 @@ function Card() {
 
 
      <button
-        className=" absolute -top-[25px] -translate-y-1/2 right-[145px] w-10 h-10 bg-blue-500 border foucs:blur-xl border-gray-400 rounded-full text-5xl cursor-pointer"
+        className=" absolute -top-[25px] -translate-y-1/2 right-[100px] w-10 h-10 bg-blue-500 border foucs:blur-xl border-gray-400 rounded-full text-5xl cursor-pointer"
         onClick={scrollRightBy}
       >
         &lt;
