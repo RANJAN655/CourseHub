@@ -20,7 +20,7 @@ export default function Home() {
       <div className='w-[100vw] h-[auto] bg-white  relative '>
     
 
-      <div className=' w-full  absolute  flex justify-center mx-auto top-[140px]'>
+      <div className=' w-[100vw] absolute  top-[16vh]'>
 
       <Card/>
      </div>
