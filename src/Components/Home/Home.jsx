@@ -1,5 +1,7 @@
 import React from 'react'
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import Rakes from '../../assets/Rakes.jpg'
+import Side from "../../assets/Side.jpg"
 import Card from './Card';
 import { useEffect } from "react";
 
@@ -26,7 +28,7 @@ export default function Home() {
 
 
       <div className=" gap-1 w-[100vw] h-[10vh]  flex  justify-center items-center">
-        <img src="./src/assets/stock-vector-promoting-selling-art-and-craft-online-in-social-media-concept-artists-artisans-advertising-2274816353.jpg" alt="image"
+        <img src={Side} alt="image"
         className='w-[8vw] object-cover h-[8vh] rounded-2xl '
         />
       <style>{`
@@ -75,7 +77,7 @@ export default function Home() {
       </div> 
 
 
-      <img src="./src/assets/stock-vector-promoting-selling-art-and-craft-online-in-social-media-concept-artists-artisans-advertising-2274816353.jpg" alt="image"
+      <img src={Side} alt="image"
         className='w-[8vw] object-cover h-[8vh] rounded-2xl mr-2'
         />
 
@@ -83,7 +85,7 @@ export default function Home() {
 
 
      <div className='w-full max-md:h-[370px] h-[570px] grow-1 shrink-1 basis-auto '>
-      <img src="./src/assets/stock-vector-business-seminar-lecture-expert-speaking-at-office-workshop-speaker-and-employees-meeting-at-2402954755.jpg" alt="" 
+      <img src={Rakes} alt="image" 
       className='object-cover max-md:mt-[220px] w-full mt-[420px] h-full '
       /> 
      
