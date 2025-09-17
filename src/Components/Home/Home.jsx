@@ -84,7 +84,7 @@ export default function Home() {
     </div>
 
 
-     <div className='w-full max-md:h-[370px] h-[570px] grow-1 shrink-1 basis-auto '>
+     <div className='w-full max-md:h-[300px] h-[570px] grow-1 shrink-1 basis-auto '>
       <img src={Rakes} alt="image" 
       className='object-cover max-md:mt-[220px] w-full mt-[420px] h-full '
       /> 
