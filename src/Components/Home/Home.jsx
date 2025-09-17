@@ -34,7 +34,7 @@ export default function Home() {
       <style>{`
         @keyframes scroll {
           0% { transform: translateX(0); }
-          100% { transform: translateX(-100%); }
+          100% { transform: translateX(-200%); }
           }
           .animate-scroll {
             animation: scroll 10s linear infinite ;
