@@ -4,7 +4,7 @@ import "./Footer.css"
 
 export default function Footer() {
     return (
-        <footer className="rk rk2 bg-white border-y">
+        <footer className="rk rk2 bg-black/40 backdrop-blur-2xl border-y">
 
 
             <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
@@ -23,7 +23,7 @@ export default function Footer() {
 
 
                         <div>
-                            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Resources</h2>
+                            <h2 className="mb-6 text-sm font-semibold text-black dark:text-white uppercase">Resources</h2>
 
 
                             <ul className="text-gray-500 font-medium">
@@ -44,7 +44,7 @@ export default function Footer() {
                             </ul>
                         </div>
                         <div>
-                            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Follow us</h2>
+                            <h2 className="  text-black dark:text-white mb-6 text-sm font-semibold  uppercase">Follow us</h2>
                             <ul className="text-gray-500 font-medium">
                                 <li className="mb-4">
                                     <a
@@ -64,7 +64,7 @@ export default function Footer() {
                             </ul>
                         </div>
                         <div>
-                            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Legal</h2>
+                            <h2 className=" text-black dark:text-white mb-6 text-sm font-semibold  uppercase">Legal</h2>
                             <ul className="text-gray-500 font-medium">
                                 <li className="mb-4">
                                     <Link to="#" className="hover:underline">

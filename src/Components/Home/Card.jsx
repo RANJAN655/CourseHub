@@ -1,5 +1,8 @@
 import { useRef, useState } from "react";
 import { Link,NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLessThan ,faGreaterThan } from "@fortawesome/free-solid-svg-icons";
+
 
 function Card() {
   const viewportRef = useRef(null);
@@ -37,10 +40,10 @@ function Card() {
   
     <div className=" relative max-w-[95vw]  max-sm:pr-.05  max-sm:pl-0.5 mx-auto select-none shrink basis-auto">
       <button
-        className="absolute -top-[25px] -translate-y-1/2 right-[10px] w-10 h-10 bg-blue-500 border foucs:blur-xl border-gray-400 rounded-full text-5xl cursor-pointer"
+        className="absolute dark:bg-white -top-[10px] -translate-y-1/2 right-[10px] w-10 h-10 rounded-md cursor-pointer"
         onClick={scrollLeftBy}
       >
-        &gt;
+        <FontAwesomeIcon icon={faGreaterThan} className=" absolute top-3 left-3 text-white dark:text-black " />
       </button>
 
       {/* Viewport */}
@@ -53,8 +56,9 @@ function Card() {
         onMouseMove={handleMouseMove}
       >
 
-      <div className='inline-block  mr-1 select-none w-full max-md:max-w-[170px] max-w-[300px]  mx-auto  '>
-        <div className="w-full  border-black rounded-lg bg-[radial-gradient(circle,rgba(238,174,202,1)_0%,rgba(148,187,233,1)_100%)]">
+      <div className=' inline-block  mr-1 select-none w-full max-md:max-w-[170px] max-w-[300px]  mx-auto  '>
+        <div className="w-full  border-black rounded-lg bg-[radial-gradient(circle,rgba(238,174,202,1)_0%,rgba(148,187,233,1)_100%)]
+          ">
             <a>
                 <img className=" hover:translate-x-1 hover:translate-y-1 hover:scale-105 duration-300 pl-[12px] p-2 rounded-4xl" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUeaheWN8FBknl5lJ2qTdyUgKepXiUunZKojKfPwzs5WsuTy1UZEkquNzonB1i8yDfBEM&usqp=CAU" alt="product_image1" />
             </a>
@@ -129,7 +133,8 @@ function Card() {
 
 
       <div className='inline-block  mr-1 select-none w-full max-md:max-w-[170px] max-w-[300px]  mx-auto  '>
-        <div className="w-full  border-black rounded-lg bg-[radial-gradient(circle,rgba(238,174,202,1)_0%,rgba(148,187,233,1)_100%)]">
+        <div className="w-full  border-black rounded-lg bg-[radial-gradient(circle,rgba(238,174,202,1)_0%,rgba(148,187,233,1)_100%)]
+         dark:bg-[linear-gradient(90deg,rgba(2,0,36,1)_0%,rgba(9,9,121,1)_35%,rgba(0,212,255,1)_100%)]">
             <a>
                 <img className=" hover:translate-x-1 hover:translate-y-1 hover:scale-105 duration-300 pl-[12px] p-2 rounded-4xl" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUeaheWN8FBknl5lJ2qTdyUgKepXiUunZKojKfPwzs5WsuTy1UZEkquNzonB1i8yDfBEM&usqp=CAU" alt="product_image1" />
             </a>
@@ -277,7 +282,7 @@ function Card() {
       </div>  
 
       <div className='inline-block  mr-1 select-none w-full max-md:max-w-[170px] max-w-[300px]  mx-auto  '>
-        <div className="w-full  border-black rounded-lg bg-[radial-gradient(circle,rgba(238,174,202,1)_0%,rgba(148,187,233,1)_100%)]">
+        <div className=" dark:bg-[linear-gradient(150deg,#f9f9f9,#d4dad6,#afbbb6,#8b9d9b,#698083,#49636f,#2c475c,#142b4e)] w-full  border-black rounded-lg bg-[radial-gradient(circle,rgba(238,174,202,1)_0%,rgba(148,187,233,1)_100%)]">
             <a>
                 <img className=" hover:translate-x-1 hover:translate-y-1 hover:scale-105 duration-300 pl-[12px] p-2 rounded-4xl" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUeaheWN8FBknl5lJ2qTdyUgKepXiUunZKojKfPwzs5WsuTy1UZEkquNzonB1i8yDfBEM&usqp=CAU" alt="product_image1" />
             </a>
@@ -661,11 +666,11 @@ function Card() {
 
 
 
-     <button
-        className=" absolute -top-[25px] -translate-y-1/2 right-[80px] w-10 h-10 bg-blue-500 border foucs:blur-xl border-gray-400 rounded-full text-5xl cursor-pointer"
+      <button
+        className="absolute -top-[10px] -translate-y-1/2 right-[100px] dark:bg-white w-10 h-10 rounded-md cursor-pointer"
         onClick={scrollRightBy}
       >
-        &lt;
+        <FontAwesomeIcon icon={faLessThan} className=" absolute top-3 left-3   text-white dark:text-black " />
       </button>
 
 

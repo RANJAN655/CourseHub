@@ -22,7 +22,7 @@ function Logine({ setIsSubmitted }) {
 
   return (
     <form onSubmit={handleSubmit}
-    className=" border-e-green-400 backdrop-blur-lg  w-screen h-auto flex flex-col justify-center items-center gap-4 py-12 "
+    className=" text-black border-black dark:text-white   backdrop-blur-lg  w-screen h-auto flex flex-col justify-center items-center gap-4 py-12 "
     >
       <h4>Demo account </h4>
 
@@ -32,7 +32,7 @@ function Logine({ setIsSubmitted }) {
         <label htmlFor="rk">Name :</label>
       <input
 
-      className="border border-white rounded-sm bg-white text-black px-15 py-2.5"
+      className="border border-black dark:bg-[#212121] dark:border-white dark:text-white rounded-md bg-white text-black px-15 py-2.5"
       id="rk"
       type="text"
       placeholder="Enter Username"
@@ -45,7 +45,7 @@ function Logine({ setIsSubmitted }) {
       <label htmlFor="rk2">Email : </label>
       <input
       id="rk2"
-      className="border border-white rounded-sm bg-white text-black px-15 py-2.5"
+      className="border  dark:bg-[#212121] dark:border-white  border-black  rounded-md dark:text-white bg-white text-black px-15 py-2.5"
       
         type="email"
         placeholder="Enter Email"
@@ -54,7 +54,7 @@ function Logine({ setIsSubmitted }) {
       />
         </div>
       <button
-      className="appearance-none  border-none p-0 outline-none shadow-none text-white px-4 py-2 rounded-md hover:bg-blue-600 "
+      className="appearance-none dark:bg-white/40 dark:text-black  border-none p-0 outline-none shadow-none text-white px-4 py-2 rounded-md hover:bg-blue-600 "
       type="submit">Submit</button>
     </form>
   );

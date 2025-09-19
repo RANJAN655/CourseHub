@@ -17,10 +17,10 @@ export default function Home() {
 
     return (
       
-      <div className='w-[100vw] h-[auto] bg-white  relative '>
+      <div className='w-[100vw] h-[auto] bg-white dark:bg-[#0a192f] relative '>
     
 
-      <div className=' w-[100vw] absolute  top-[16vh]'>
+      <div className=' w-[100vw] absolute  top-[18vh]'>
 
       <Card/>
      </div>
@@ -33,11 +33,11 @@ export default function Home() {
         />
       <style>{`
         @keyframes scroll {
-          0% { transform: translateX(0); }
+          0% { transform: translateX(150%); }
           100% { transform: translateX(-200%); }
           }
           .animate-scroll {
-            animation: scroll 10s linear infinite ;
+            animation: scroll 27s linear infinite ;
           }
       `}</style>
 
@@ -64,7 +64,7 @@ export default function Home() {
             Diwali special AI and ML course
           </div>
           <div className="font-sans flex-none max-md:text-[15px]  w-[80%] h-[100%] m-2  rounded-lg flex items-center justify-center text-2xl font-bold
-          bg-gradient-to-t from-[#22c1c3] to-[#fdbb2d]
+          bg-[#0f172a]
           ">
             Check out our gurantee pacement course
           </div>
