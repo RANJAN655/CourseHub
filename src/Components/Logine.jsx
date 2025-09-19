@@ -54,7 +54,7 @@ function Logine({ setIsSubmitted }) {
       />
         </div>
       <button
-      className="appearance-none dark:bg-white/40 dark:text-black  border-none p-0 outline-none shadow-none text-white px-4 py-2 rounded-md hover:bg-blue-600 "
+      className="appearance-none bg-green-400 dark:bg-white/40 dark:text-black  border-none p-0 outline-none shadow-none text-white px-4 py-2 rounded-md hover:bg-blue-600 "
       type="submit">Submit</button>
     </form>
   );
