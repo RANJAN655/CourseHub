@@ -40,7 +40,7 @@ function Card() {
   
     <div className=" relative max-w-[95vw]  max-sm:pr-.05  max-sm:pl-0.5 mx-auto select-none shrink basis-auto">
       <button
-        className="absolute dark:bg-white -top-[10px] -translate-y-1/2 right-[10px] w-10 h-10 rounded-md cursor-pointer"
+        className="absolute bg-green-400 dark:bg-white -top-[10px] -translate-y-1/2 right-[10px] w-10 h-10 rounded-md cursor-pointer"
         onClick={scrollLeftBy}
       >
         <FontAwesomeIcon icon={faGreaterThan} className=" absolute top-3 left-3 text-white dark:text-black " />
@@ -667,7 +667,7 @@ function Card() {
 
 
       <button
-        className="absolute -top-[10px] -translate-y-1/2 right-[100px] dark:bg-white w-10 h-10 rounded-md cursor-pointer"
+        className="bg-green-400 absolute -top-[10px] -translate-y-1/2 right-[100px] dark:bg-white w-10 h-10 rounded-md cursor-pointer"
         onClick={scrollRightBy}
       >
         <FontAwesomeIcon icon={faLessThan} className=" absolute top-3 left-3   text-white dark:text-black " />
